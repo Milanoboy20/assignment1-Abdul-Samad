@@ -43,11 +43,18 @@ public class ArrayManipulation {
         System.out.println("\nSum of numbers in the array: " + sum);
 
         //5. check for even number
+        if (!checkEven(numbers)) {
+            System.out.println("This array does not contain an even number!");
+        }
+    }
+
+    private static boolean checkEven(Integer[] numbers) {
         for (int i = 0; i < numbers.length; i++){
             if (numbers[i] % 2 == 0){
                 System.out.println("This array contains an even number: " + numbers[i]);
-                break;// need only first instance
+                return true;// need only first instance
             }
         }
+        return false;
     }
 }
