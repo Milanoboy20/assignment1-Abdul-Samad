@@ -21,10 +21,11 @@ public class ArrayManipulation {
             do {
                 System.out.println("Enter a valid Integer: ");
                 num = input.nextLine();
-            } while (!num.matches("^-?[0-9]+$"));
+            } while (!num.matches("^-?[0-9]+$"));// do while to make sure valid input is received
 
             numbers[i] = Integer.parseInt(num);
         }
+        System.out.println("Input array: " + Arrays.toString(numbers));
 
         //2. Reverse the array and print
         Collections.reverse(Arrays.asList(numbers));
